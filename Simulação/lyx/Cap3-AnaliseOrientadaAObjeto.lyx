@@ -1,0 +1,793 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+\end_preamble
+\use_default_options false
+\master /home2/andreduartebueno/workdir/ModeloDocumento-ProjetoEngenharia-ProgramacaoPratica/doc/manualDesenvolvedor-lyx/DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children no
+\language brazilian
+\language_package auto
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement p
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Análise Orientada a Objeto}  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+AOO
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+AOO
+\end_layout
+
+\end_inset
+
+ – Análise Orientada a Objeto
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Análise Orientada a Objeto"
+
+\end_inset
+
+
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Análise orientada a objeto
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:AOO"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A terceira etapa do desenvolvimento de um projeto de engenharia,
+ no nosso caso um software aplicado a engenharia de petróleo,
+ é a AOO – Análise Orientada a Objeto.
+ A AOO utiliza algumas regras para identificar os objetos de interesse,
+ as relações entre os pacotes,
+ as classes,
+ os atributos,
+ os métodos,
+ as heranças,
+ as associações,
+ as agregações,
+ as composições e as dependências.
+ O resultado da análise é um conjunto de diagramas que identificamos objetos e seus relacionamentos.
+\end_layout
+
+\begin_layout Section
+Diagramas de classes
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Diagramas-de-classes"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O diagrama de classes é apresentado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-classes"
+nolink "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagens/diagrama de classe.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de classes
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-classes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Dicionário de classes
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Dicionário-de-classes"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Classe 
+\series bold
+seismicSimulator
+\series default
+:
+ Representa o núcleo do simulador do efeito sismoelétrico.
+ É responsável por gerenciar o fluxo completo da simulação,
+ desde a inicialização dos parâmetros,
+ cálculos no domínio da frequência e do tempo,
+ até a normalização e visualização dos resultados.
+ Atua como orquestrador que integra todas as outras classes.
+ Têm como função inicializar os parâmetros do sistema,
+ executa as transformadas,
+ construir as soluções.
+ 
+\end_layout
+
+\begin_layout Itemize
+Classe 
+\series bold
+systemParameters
+\series default
+:
+ Representa os parâmetros globais do sistema utilizados na simulação,
+ como frequência dominante,
+ profundidade da fonte sísmica,
+ tempo total de simulação,
+ número de pontos de discretização,
+ comprimento de Debye e permissividade elétrica do meio.
+ É a base de configuração do simulador.
+\end_layout
+
+\begin_layout Itemize
+Classe 
+\series bold
+rockProperties
+\series default
+:
+ Modela as propriedades físicas da rocha porosa onde o efeito sismoelétrico será simulado.
+ Inclui parâmetros como porosidade,
+ permeabilidade,
+ densidade,
+ módulo de cisalhamento,
+ módulo de bulk,
+ módulo de Biot e fator de tortuosidade.
+\end_layout
+
+\begin_layout Itemize
+Classe 
+\series bold
+fluidProperties
+\series default
+:
+ Representa as propriedades dos fluidos presentes nos poros da rocha.
+ Inclui viscosidade,
+ condutividade elétrica,
+ densidade e constante dielétrica.
+ Cada instância da classe pode modelar um fluido diferente,
+ permitindo a simulação de cenários multi-fluídos.
+ É responsável por fornecer os dados para o cálculo das respostas eletromecânicas no meio poroso saturado.
+\end_layout
+
+\begin_layout Itemize
+Classe 
+\series bold
+FFTWrapper
+\series default
+:
+ Fornece uma abstração para o uso da biblioteca FFTW (Fast Fourier Transform),
+ facilitando a execução de transformadas rápidas de Fourier e suas inversas.
+ É utilizada pelo simulador para transformar sinais entre os domínios do tempo e da frequência.
+\end_layout
+
+\begin_layout Itemize
+Classe 
+\series bold
+eigenvalueSolver
+\series default
+:
+ Implementa os cálculos necessários para resolver os autovalores e autovetores associados ao sistema dinâmico do simulador.
+ Essencial para determinar os modos próprios de vibração e propagação de ondas no meio poroelástico.
+ É base para calcular parâmetros críticos que descrevem as soluções no domínio da frequência.
+ 
+\end_layout
+
+\begin_layout Itemize
+Classe 
+\series bold
+gnuplotPlotter
+\series default
+:
+ asse que fornece os métodos necessários para a geração de gráficos.
+ 
+\end_layout
+
+\begin_layout Section
+Diagrama de seqüência – eventos
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Eventos
+\end_layout
+
+\end_inset
+
+ e mensagens
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Mensagens
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de sequência
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:diagrama de sequência"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\emph on
+O diagrama de seqüência enfatiza a troca de eventos e mensagens e sua ordem temporal.
+ Contém informações sobre o fluxo de controle do software.
+ Costuma ser montado a partir de um diagrama de caso de uso e estabelece o relacionamento dos atores (usuários e sistemas externos) com alguns objetos do sistema.
+ O diagrama de sequência pode ser geral,
+ englobando todas as operações do sistema ou específico,
+ que enfatiza uma determinada operação.
+\end_layout
+
+\begin_layout Subsection
+
+\shape italic
+\emph on
+Diagrama de sequência geral
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec: Diagrama de sequência geral"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Veja o 
+\shape italic
+\emph on
+diagrama de sequência na
+\shape default
+\emph default
+ Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-sequencia"
+nolink "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagens/diagrama de sequência geral.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de sequência
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-sequencia"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+deve mostrar uma sequência geral
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de comunicação
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+comunicação
+\end_layout
+
+\end_inset
+
+ – colaboração
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+colaboração
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Diagrama-de-Comunicação"
+
+\end_inset
+
+
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de colaboração
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "par:Diagrama-de-colaboração:"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+No diagrama de comunicação o foco é a interação e a troca de mensagens e dados entre os objetos.
+ 
+\end_layout
+
+\begin_layout Standard
+Veja na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Diagrama-de-Comunicação"
+nolink "false"
+
+\end_inset
+
+ o diagrama de comunicação com foco no simulador propriamente dito.
+ As linhas indicam ora criação de objetos ora acesso a funções das classes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagens/diagrama de comunicação.png
+	lyxscale 85
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de comunicação
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-comunicação"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de estado
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+estado
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+range none
+pageformat default
+status open
+
+\begin_layout Plain Layout
+Diagrama de estado
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:diagrama de estados"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um diagrama de máquina de estado representa os diversos estados que o objeto assume e os eventos que ocorrem ao longo de sua vida ou mesmo ao longo de um processo (histórico do objeto).
+ É usado para modelar aspectos dinâmicos do objeto.
+ Existem basicamente dois usos para máquinas de estado:
+ máquinas de estado comportamentais e máquinas de estado para protocolos.
+\end_layout
+
+\begin_layout Standard
+Veja na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-maquina-de-estado"
+nolink "false"
+
+\end_inset
+
+ o diagrama de máquina de estado para o objeto seismicSimulator.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagens/diagrama de estado.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de máquina de estado
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-maquina-de-estado"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de atividades
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: Diagrama de atividades"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O diagrama de atividades é um diagrama UML utilizado para modelar o aspecto comportamental de processos.
+ Neste diagrama,
+ uma atividade é modelada como uma sequência estruturada de ações controladas por nós de decisão e sincronismo.
+ 
+\end_layout
+
+\begin_layout Standard
+Veja na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-atividades"
+nolink "false"
+
+\end_inset
+
+ o diagrama de atividades correspondente a uma atividade específica do diagrama de máquina de estado.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagens/diagrama de atividade.png
+	lyxscale 85
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de atividades
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-atividades"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

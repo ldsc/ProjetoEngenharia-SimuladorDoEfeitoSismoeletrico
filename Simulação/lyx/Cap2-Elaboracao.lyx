@@ -1,0 +1,1935 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master 3-Projeto-ModelosDeEngenharia-Master.lyx
+\maintain_unincluded_children no
+\language brazilian
+\language_package auto
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style apalike
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Elaboração}  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Elaboração
+\begin_inset Index idx
+range none
+pageformat default
+status collapsed
+
+\begin_layout Plain Layout
+Elaboração
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Elaboração"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Depois da definição dos objetivos,
+ da especificação do software e da montagem dos primeiros diagramas de caso de uso,
+ a equipe de desenvolvimento do projeto de engenharia passa por um processo de elaboração que envolve o estudo de conceitos relacionados ao sistema a ser desenvolvido,
+ a análise de domínio e a identificação de pacotes.
+ 
+\end_layout
+
+\begin_layout Standard
+Na elaboração fazemos uma análise dos requisitos,
+ ajustando os requisitos iniciais de forma a desenvolver um sistema útil,
+ que atenda às necessidades do usuário e,
+ na medida do possível,
+ permita seu reuso e futura extensão.
+\end_layout
+
+\begin_layout Section
+Análise de domínio
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Análise-de-domínio"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Após estudo dos requisitos/especificações do sistema,
+ algumas entrevistas,
+ estudos na biblioteca e disciplinas do curso foi possível identificar nosso domínio de trabalho:
+\end_layout
+
+\begin_layout Itemize
+Geofísica:
+ parte fundamental na qual sustenta este projeto.
+ O software desenvolvido,
+ utiliza conceitos de propagação de ondas sísmicas e a interação destas com as propriedades elétricas dos meios geológicos.
+ Essencial para compreensão do efeito estudado,
+ no qual integra respostas eletromagnéticas induzidas por ondas sísmicas.
+ 
+\end_layout
+
+\begin_layout Itemize
+Álgebra linear e Cálculo Integral e Diferencial na resolução de equações diferenciais,
+ sistema de matrizes,
+ por exemplo.
+ 
+\end_layout
+
+\begin_layout Itemize
+Métodos Numéricos e Computacionais:
+ é essencial para o desenvolvimento de algoritmos eficientes para a solução de equações diferenciais,
+ transformadas de Fourier,
+ cálculo de autovalores e autovetores.
+\end_layout
+
+\begin_layout Itemize
+Eletromagnetismo:
+ é fundamental compreender os princípios de campos elétricos e magnéticos em meios condutores e dielétricos para compreender a geração dos potenciais elétricos que são associados ao efeito sismoelétrico.
+ Além disso,
+ o domínio das equações de Maxwell.
+\end_layout
+
+\begin_layout Itemize
+Pacote Gráfico:
+ usar-se-á um pacote gráfico para plotar velocidade de deslocamento das fases fluídas em altas e baixas frequências.
+ 
+\end_layout
+
+\begin_layout Itemize
+Software:
+ serão utilizadas métodos e funções já existentes para a resolução de transformadas de Fourier.
+\end_layout
+
+\begin_layout Section
+Formulação teórica
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Formulação-teórica"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Equações de Pride 
+\end_layout
+
+\begin_layout Standard
+As equações de Pride que modelam o efeito eletrocinético (para baixas frequências) em meios porosos,
+ em cada ponto 
+\series bold
+x
+\begin_inset Formula $=\left(x,y,z\right)\mathrel{\in\Re^{3}}$
+\end_inset
+
+
+\series default
+,
+ são:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+\nabla\times\text{\textbf{E}}=i\omega\mu_{0}\text{\textbf{{\normalcolor H}}},\text{}\nabla\cdot\text{{\normalcolor \mathbf{H}}}=0\\
+\nabla\times\text{{\normalcolor \mathbf{H}}}=\left(\sigma-i\epsilon\omega\right)\text{{\normalcolor \mathbf{E}}}+L\left(-\nabla p+\omega^{2}\rho_{f}\mathbf{\text{{\normalcolor \textbf{u}}}}+\text{\textbf{{\normalcolor f}}}\right)+\textbf{\text{{\normalcolor j}}}\\
+-\omega^{2}\left(\rho\text{\textbf{{\normalcolor u}}}+\rho_{f}\text{{\normalcolor \textbf{w}}}\right)=\nabla\cdot\tau+\text{{\normalcolor \textbf{F}}}\\
+-i\omega\text{{\normalcolor \textbf{w}}}=L\text{{\normalcolor \textbf{E}}}+\frac{\kappa}{\eta}\left(-\nabla p+\omega^{2}\rho_{f}\text{{\normalcolor \textbf{u}}}+\textbf{\text{{\normalcolor f}}}\right)\\
+\tau=\left(\lambda\nabla\cdot\text{{\normalcolor \textbf{u}}}+C\nabla\cdot\text{{\normalcolor \textbf{w}}}\right)\text{I}+\mu\left(\nabla\textbf{\text{{\normalcolor u}}}+\nabla\text{\textbf{{\normalcolor u}}}^{T}\right)\\
+-p=C\nabla\cdot\text{{\normalcolor \textbf{u}}}+M\nabla\cdot\text{{\normalcolor \textbf{w}.}}
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Neste conjunto de equações,
+ um sólido poroso saturado por um fluido viscoso de fase única e compressível é considerado,
+ e também é assumido que todo o agregado é isotrópico;
+ além disso,
+ uma dependência de tempo de 
+\begin_inset Formula $𝑒^{−𝑖𝜔𝑡}$
+\end_inset
+
+,
+ onde 
+\begin_inset Formula $𝜔$
+\end_inset
+
+ é frequência,
+ é assumida.
+ As fontes nas equações de Pride são as seguintes:
+ 
+\series bold
+F
+\series default
+,
+ a força imposta no volume material,
+
+\series bold
+ f
+\series default
+,
+ a força imposta no fluido contudo nos poros e 
+\series bold
+j
+\series default
+,
+ a corrente elétrica aplicada externamente.
+ As seguintes são as quantidades a serem calculadas:
+ 
+\series bold
+E
+\series default
+,
+ o campo elétrico,
+ 
+\series bold
+H
+\series default
+,
+ o campo magnético,
+ 
+\series bold
+u
+\series default
+,
+ o deslocamento do sólido,
+ 
+\series bold
+w
+\series default
+,
+ o deslocamento relativo do fluido,
+ 
+\begin_inset Formula $𝜏$
+\end_inset
+
+,
+ o tensor de tensão,
+ e 
+\begin_inset Formula $𝑝$
+\end_inset
+
+,
+ a pressão no fluido de poros;
+ 𝐼 é a matriz de identidade 
+\begin_inset Formula $3×3$
+\end_inset
+
+.
+ Os parâmetros materiais nas equações de Pride são os seguintes:
+ 
+\begin_inset Formula $𝜇$
+\end_inset
+
+,
+ a permeabilidade magnética,
+ 
+\begin_inset Formula $𝜖$
+\end_inset
+
+,
+ a constante dielétrica,
+ 
+\begin_inset Formula $𝜆$
+\end_inset
+
+ e 
+\begin_inset Formula $𝜇$
+\end_inset
+
+,
+ os parâmetros Lamé,
+ 
+\begin_inset Formula $𝑐$
+\end_inset
+
+ e 
+\begin_inset Formula $𝑚$
+\end_inset
+
+,
+ os módulos de Biot,
+ 
+\begin_inset Formula $𝜌=𝜑𝜌𝑓+(1−𝜑)𝜌𝑠$
+\end_inset
+
+,
+ a densidade aparente,
+ 
+\begin_inset Formula $𝜑$
+\end_inset
+
+,
+ a porosidade efetiva de meio,
+ 
+\begin_inset Formula $𝜌_{𝑓}$
+\end_inset
+
+ ,
+ a densidade do fluido,
+ 
+\begin_inset Formula $𝜅$
+\end_inset
+
+,
+ a permeabilidade,
+ 
+\begin_inset Formula $𝜂$
+\end_inset
+
+,
+ a viscosidade do fluido,
+ e 
+\begin_inset Formula $𝐿$
+\end_inset
+
+,
+ o coeficiente de acoplamento eletrocinético.
+ Quando 
+\begin_inset Formula $𝐿\neq0$
+\end_inset
+
+ temos os sistemas de Lamé e de Maxwell acoplados.
+ Para 
+\begin_inset Formula $𝐿=0$
+\end_inset
+
+,
+ as equações se reduzem a sistemas desacoplados,
+ com as equações de Maxwell governando o eletromagnetismo e as equações de Biot governando o movimento de fluido e de sólido em um meio poroso.
+ 
+\end_layout
+
+\begin_layout Standard
+Vamos escrever
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\overline{\sigma}=\sigma-i\epsilon\omega
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+onde 
+\begin_inset Formula $𝜎>>𝜖𝜔$
+\end_inset
+
+ na subsuperfície 
+\begin_inset Formula $𝑧>0$
+\end_inset
+
+,
+ de modo que 
+\begin_inset Formula $𝜎$
+\end_inset
+
+ possa ser aproximado por 
+\begin_inset Formula $𝜎$
+\end_inset
+
+ nesta região.
+ Essa aproximação é equivalente a ignorância das correntes de deslocamento na Terra.
+ No ar,
+ 
+\begin_inset Formula $𝑧<0$
+\end_inset
+
+,
+ a condutividade 
+\begin_inset Formula $𝜎$
+\end_inset
+
+ é zero,
+ e a constante dielétrica 
+\begin_inset Formula $𝜖\neq0$
+\end_inset
+
+,
+ de modo que temos 
+\begin_inset Formula $𝜎=−𝑖𝜖_{0}𝜔$
+\end_inset
+
+ no ar.
+ Para construir um algoritmo para um código computacional rápido,
+ restringiremos ao caso em que os parâmetros de meio são constantes por partes.
+ Assim,
+ assume-se que as propriedades do meio são constantes dentro de cada camada,
+ mas mudam de forma à medida que 
+\begin_inset Formula $𝑧$
+\end_inset
+
+ varia através de uma interface horizontal.
+ Nas fronteiras das camadas,
+ aplicamos a condição de interface da Pride,
+ onde 
+\series bold
+u
+\series default
+,
+ 
+\begin_inset Formula $𝑝$
+\end_inset
+
+,
+ os componentes normais de 
+\series bold
+w
+\series default
+ e 
+\begin_inset Formula $𝜏$
+\end_inset
+
+ ,
+ e os componentes tangenciais de 
+\series bold
+E
+\series default
+ e 
+\series bold
+H
+\series default
+ são contínuas .
+ Resta fornecer as condições de contorno na interface terra/ar em 
+\begin_inset Formula $𝑧=0$
+\end_inset
+
+.
+ Aplicando as condições da interface de Pride,
+ temos que as condições de contorno são 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+𝑧=0:\text{}𝜏_{13}=𝜏_{23}=𝜏_{33}=0,𝑝=0,\text{}\widetilde{H}_{2}=−𝜖_{0}𝑞_{0}\widetilde{E}_{1},\text{}\widetilde{H}_{1}=−𝑞_{0}𝜇_{0}\widetilde{E}_{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+onde
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\widetilde{F}\left(k_{1},k_{2},z\right)=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}e^{i\left(k_{1}x+k_{2}y\right)}F(x,y,z)dxdy.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Na Equação 3 esses relacionamentos são derivados da condição de haver apenas ondas 
+\begin_inset Formula $EM$
+\end_inset
+
+ ascendentes no ar,
+ e 
+\begin_inset Formula $𝑞_{0}$
+\end_inset
+
+ é a lentidão vertical de uma onda 
+\begin_inset Formula $EM$
+\end_inset
+
+ no ar,
+ isto é,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{0}=\sqrt{\epsilon_{0}\mu_{0}-\gamma^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+onde 
+\begin_inset Formula $𝜇_{0}$
+\end_inset
+
+ é a permeabilidade magnética do ar,
+ de modo que 
+\begin_inset Formula $𝜖_{0}𝜇_{0}$
+\end_inset
+
+ é o quadrado da velocidade da luz.
+ 
+\end_layout
+
+\begin_layout Section
+Sistema de Pride no formato de Ursin 
+\end_layout
+
+\begin_layout Standard
+Quando escrevemos o sistema das equações da interação eletrocinética no formato de Ursin,
+ o sistema nas variáveis 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+e 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+ é substituído por um sistema de equações diferenciais que depende apenas da variável 
+\begin_inset Formula $z=x_{3}$
+\end_inset
+
+.
+ Assim,
+ aplica-se a transformada de Fourier bidimensional nas duas coordenadas laterais 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ do sistema.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{X}(k_{1},k_{2},z)\equiv\mathcal{F}[f(t)]=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}e^{-i(k_{1}x_{1}+k_{2}x_{2})}X(k_{1},k_{2},z)dx_{1}dx_{2},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+enquanto a transformada inversa de 
+\begin_inset Formula $\hat{X}$
+\end_inset
+
+ é 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+X(k_{1},k_{2},z)\equiv\mathcal{F}^{-1}[\hat{X}]=\frac{1}{4\pi^{2}}\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}e^{-i(k_{1}x_{1}+k_{2}x_{2})}\hat{X}(k_{1},k_{2},z)dk_{1}dk_{2},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A magnitude do número de onda horizontal é 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k=\sqrt{k_{1}^{2}+k_{2}^{2}},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e a vagarosidade horizontal,
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+𝛾=\frac{𝑘}{\omega}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assim,
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathcal{F}\left[\frac{\partial X}{\partial x_{i}}\right]=ik\hat{\text{H}}(k_{1},k_{2},z),\text{}\text{}\text{}\text{}i=1,2.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando a transformada bidimensional de Fourier nas equações do sistema de Pride,
+ utilizando a propriedade da derivação,
+ obtêm-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(ik_{3}\hat{\textnormal{E}}_{3}-\frac{\partial\hat{\textnormal{E}}}{\partial z},\frac{\partial\hat{\textnormal{E}}}{\partial z}-ik_{1}\hat{\textnormal{E}}_{3},ik_{1}\hat{\textnormal{E}}_{2}-ik_{2}\hat{\textnormal{E}}_{1}\right)=i\omega\mu\left(\hat{\textnormal{H}}_{1},\hat{\textnormal{H}}_{2},\hat{\textnormal{H}}_{3}\right),
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+\left(ik_{3}\hat{\textnormal{E}}_{3}-\frac{\partial\hat{\textnormal{E}}}{\partial z},\frac{\partial\hat{\textnormal{E}}}{\partial z}-ik_{1}\hat{\textnormal{E}}_{3},ik_{1}\hat{\textnormal{E}}_{2}-ik_{2}\hat{\textnormal{E}}_{2}\right)=\bar{\sigma}\left(\hat{\textnormal{H}}_{1},\hat{\textnormal{H}}_{2},\hat{\textnormal{H}}_{3}\right)+\\
++L(-\left(ik_{1}\hat{{\normalcolor p}},ik_{2}\hat{{\normalcolor p}},\frac{\partial\hat{{\normalcolor p}}}{\partial z}\right)+\omega^{2}\rho_{f}(\hat{u}_{1},\hat{u}_{2},\hat{u}_{3})+(\hat{{\normalcolor f}_{1}},\hat{{\normalcolor f}_{2}},\hat{{\normalcolor f}_{3}}))+(\hat{j_{1}},\hat{j_{2}},\hat{j_{3}}),
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+-\omega^{2}(\rho(\hat{u}_{1},\hat{u}_{2},\hat{u}_{3})+\rho_{f}((\hat{w}_{1},\hat{w}_{2},\hat{w}_{3}))=\\
+=\left(i\kappa_{1}\hat{\tau}_{11}+i\kappa_{2}\hat{\tau}_{21}+\frac{\partial\hat{\tau}_{31}}{\partial z},i\kappa_{1}\hat{\tau}_{12}+i\kappa_{2}\hat{\tau}_{22}+\frac{\partial\hat{\tau}_{32}}{\partial z},i\kappa_{1}\hat{\tau}_{13}+i\kappa_{2}\hat{\tau}_{23}+\frac{\partial\hat{\tau}_{33}}{\partial z}\right)+(\hat{\textnormal{F}}_{1},\hat{\textnormal{F}}_{2},\hat{\textnormal{F}}_{3}),
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-i\omega(\hat{w}_{1},\hat{w}_{2},\hat{w}_{3})=L(\textnormal{\hat{\textnormal{E}}}_{1},\hat{\textnormal{E}}_{2},\hat{\textnormal{E}}_{3})+\frac{\kappa}{\eta}\left(-\left(ik_{1}\hat{{\normalcolor p}},ik_{2}\hat{{\normalcolor p}},\frac{\partial\hat{p}}{\partial z}\right)+\omega^{2}\rho_{f}(\hat{u}_{1},\hat{u}_{2},\hat{u}_{3})+(\hat{{\normalcolor f}_{1}},\hat{{\normalcolor f}_{2}},\hat{{\normalcolor f}_{3}})\right),
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\tau}=\left(\lambda\left(i\kappa_{1}\hat{u}_{1}+i\kappa_{2}\hat{u}_{2}+\frac{\partial\hat{u}_{3}}{\partial z}\right)+C\left(i\kappa_{1}\hat{w}_{1}+i\kappa_{2}\hat{w}_{2}+\frac{\partial\hat{w}_{3}}{\partial z}\right)\right)I+G\text{{\normalcolor N}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+onde 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\text{{\normalcolor N}}=\left(\begin{array}{ccc}
+2i\kappa_{1}û_{1} & i\kappa_{2}û_{1}+i\kappa_{1}û_{2} & \frac{\partialû_{1}}{\partial z}+i\kappa_{1}û_{3}\\
+i\kappa_{1}û_{2}+i\kappa_{2}û_{1} & 2i\kappa_{2}û_{2} & \frac{\partialû_{2}}{\partial z}+i\kappa_{2}û_{3}\\
+i\kappa_{1}û_{3}+\frac{\partialû_{1}}{\partial z} & i\kappa_{2}û_{3}+\frac{\partialû_{2}}{\partial z} & 2\frac{\partialû_{3}}{\partial z}
+\end{array}\right),
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-\hat{{\normalcolor p}}=\left(C\left(i\kappa_{1}û_{2}+i\kappa_{2}û_{1}+\frac{\partialû_{3}}{\partial z}\right)+M\left(i\kappa_{1}\hat{w}_{1}+i\kappa_{2}\hat{w}_{2}+\frac{\partial\hat{w}_{3}}{\partial z}\right)\right).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quando usamos a notação 
+\begin_inset Formula $\dot{\hat{u}}$
+\end_inset
+
+ omitimos o termo 
+\begin_inset Formula $-i\omega$
+\end_inset
+
+.
+ O termos 
+\begin_inset Formula $û$
+\end_inset
+
+ representa a velocidade do deslocamento absoluto da fase sólida e 
+\begin_inset Formula $\hat{w}$
+\end_inset
+
+ a velocidade do deslocamento relativo do fluido.
+ 
+\end_layout
+
+\begin_layout Standard
+Da Equação 11,
+ obtemos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\textnormal{H}}_{3}=\frac{\kappa_{1}\hat{\textnormal{E}}_{2}}{\omega\mu}-\frac{\kappa_{2}\hat{\textnormal{E}}_{1}}{\omega\mu}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e da Equação 12:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\textnormal{E}}_{3}=\frac{1}{\bar{\sigma}}\left(i\kappa_{1}\hat{\textnormal{H}}_{1}+i\kappa_{2}\hat{\textnormal{H}}_{2}+L\frac{\partial\hat{{\normalcolor p}}}{\partial z}-L\omega^{2}\rho_{f}û_{3}-L\hat{{\normalcolor f}_{1}}-\hat{j_{3}}\right).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assim,
+ da Equação 14:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dot{\hat{w}}_{1}=L\hat{\textnormal{E}}_{1}-\frac{\kappa}{\eta}ik_{1}\hat{{\normalcolor p}}+\omega^{2}\rho_{f}\frac{\kappa}{\eta}\hat{u}_{1}+\frac{\kappa}{\eta}\hat{{\normalcolor f}_{1}},\label{eq:W1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dot{\hat{w}}_{2}=L\hat{\textnormal{E}}_{2}-\frac{\kappa}{\eta}ik_{2}\hat{{\normalcolor p}}+\omega^{2}\rho_{f}\frac{\kappa}{\eta}\hat{u}_{2}+\frac{\kappa}{\eta}\hat{{\normalcolor f}_{2}},\label{eq:W2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dot{\hat{w}}_{3}=L\hat{\textnormal{E}}_{3}-\frac{\kappa}{\eta}\frac{\partial\hat{{\normalcolor p}}}{\partial z}+\omega^{2}\rho_{f}\frac{\kappa}{\eta}\hat{u}_{3}+\frac{\kappa}{\eta}\hat{{\normalcolor f}_{3}}.\label{eq:W3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das Equações 15 e 16:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\tau}_{12}=-\frac{G\kappa_{1}}{\omega}\dot{\hat{u}}_{1}-\frac{G\kappa_{1}}{\omega}\dot{\hat{u}}_{2},\label{eq:TAU12}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\tau}_{11}=-\frac{2G\kappa_{1}}{\omega}\dot{\hat{u}}_{1}-\frac{2Gi}{\omega}\frac{d\dot{\hat{u}}_{3}}{dz}+\hat{\tau}_{33},\label{eq:TAU11}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\tau}_{22}=-\frac{2G\kappa_{2}}{\omega}\dot{\hat{u}}_{2}-\frac{2Gi}{\omega}\frac{d\dot{\hat{u}}_{3}}{dz}+\hat{\tau}_{33}.\label{eq:TAU22}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Explicitando a derivada em relação a z de cada uma das varáveis envolvidas no sistema de equações das transformadas e das Equações 12 e 18,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\hat{\textnormal{H}}_{1}}{dz}=i\omega L\rho_{f}\dot{\hat{u}}_{2}-\frac{i\kappa_{1}\kappa_{2}}{\omega\mu}\hat{\textnormal{E}}_{1}+\left(\frac{i\kappa_{1}^{2}}{\omega\mu}+\bar{\sigma}\right)\hat{\textnormal{E}}_{2}-Li\kappa_{2}\hat{{\normalcolor p}}+L\hat{{\normalcolor f}_{2}}+\hat{j_{2}},\label{eq:derivadaH1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\hat{\textnormal{H}}_{2}}{dz}=i\omega L\rho_{f}\dot{\hat{u}}_{1}-\left(\frac{i\kappa_{2}^{2}}{\omega\mu}+\bar{\sigma}\right)\hat{\textnormal{E}}_{1}+\frac{i\kappa_{1}\kappa_{2}}{\omega\mu}\hat{\textnormal{E}}_{2}-Li\kappa_{1}\hat{{\normalcolor p}}+L\hat{{\normalcolor f}_{1}}+\hat{j_{1}},\label{eq:derivadaH2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+das Equações 14 e 19:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+\frac{d\hat{{\normalcolor p}}}{dz}=-\left(\frac{\kappa}{\eta}-\frac{L^{2}}{\bar{\sigma}}\right)^{-1}\hat{w}_{3}+i\omega\rho_{f}\dot{\hat{u}}_{3}-\left(\frac{\kappa}{\eta}-\frac{L^{2}}{\bar{\sigma}}\right)^{-1}\frac{Li\kappa_{2}}{\bar{\sigma}}\hat{\textnormal{H}}_{1}+\\
++\left(\frac{\kappa}{\eta}-\frac{L^{2}}{\bar{\sigma}}\right)^{-1}\frac{Li\kappa_{2}}{\bar{\sigma}}\hat{\textnormal{H}}_{2}+\hat{{\normalcolor f}_{3}}-\left(\frac{\kappa}{\eta}-\frac{L^{2}}{\bar{\sigma}}\right)^{-1}\frac{L}{\bar{\sigma}}\hat{j_{3}}.
+\end{array}\label{eq:delpdez}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+das Equações 15 e 17,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\dot{\hat{u}}_{1}}{dz}=i\omega G^{-1}\hat{\tau}_{13}-i\kappa_{1}\dot{\hat{u}}_{3},\label{eq:du1dz}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\dot{\hat{u}}_{2}}{dz}=i\omega G^{-1}\hat{\tau}_{23}-i\kappa_{2}\dot{\hat{u}}_{3},\label{eq:du2dz}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\dot{\hat{u}}_{3}}{dz}=\frac{-i\omega}{C^{2}-M\left(\lambda+2G\right)}\left(\frac{\kappa_{1}\left(C^{2}-\lambda M\right)}{\omega}\dot{\hat{u}}_{1}+\frac{\kappa_{2}\left(C^{2}-\lambda M\right)}{\omega}\dot{\hat{u}}_{2}-M\hat{\tau}_{33}-C\hat{{\normalcolor p}}\right).\label{eq:du3dz}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+E das outras Equações 15,
+ 17,
+ 20,
+ 21 e 31,
+ tem-se:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\left(-\dot{\hat{w}}_{3}\right)}{dz}=\frac{-i\omega}{C^{2}-M\lambda}\left(-\frac{\left(C^{2}-M\lambda\right)}{\omega}\kappa_{1}\dot{\hat{w}}_{1}+\frac{\left(C^{2}-M\lambda\right)}{\omega}\kappa_{2}\dot{\hat{w}}_{2}+\frac{2CGi}{\omega}\frac{d\dot{\hat{u}}_{3}}{dz}+C\hat{\tau}_{33}-\lambda\hat{{\normalcolor p}}\right).\label{eq:d-W3dz}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir das Equações 11,
+ 19 e 28 tem-se:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\dot{\hat{\textnormal{E}}}_{1}}{dz}=\frac{L\omega\kappa_{1}\rho_{f}}{\bar{\sigma}}\dot{\hat{u}}_{1}+\frac{\kappa_{1}\kappa_{2}}{\bar{\sigma}}\dot{\hat{\textnormal{H}}}_{1}-\left(i\omega\mu-\frac{\kappa_{1}^{2}}{\bar{\sigma}}\right)\dot{\hat{\textnormal{H}}}_{2}-\frac{i\kappa_{1}L}{\bar{\sigma}}\frac{d\hat{{\normalcolor p}}}{dz}+\frac{i\kappa_{1}L}{\bar{\sigma}}\hat{{\normalcolor f}_{3}}+\frac{i\kappa_{1}}{\bar{\sigma}}\hat{j_{3}},\label{eq:dE1dz}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\dot{\hat{\textnormal{E}}}_{2}}{dz}=\frac{L\omega\kappa_{2}\rho_{f}}{\bar{\sigma}}\dot{\hat{u}}_{3}+\left(\frac{\kappa_{2}^{2}}{\bar{\sigma}}-i\omega\mu\right)\dot{\hat{\textnormal{H}}}_{1}-\frac{\kappa_{1}\kappa_{2}}{\bar{\sigma}}\dot{\hat{\textnormal{H}}}_{2}-\frac{i\kappa_{2}L}{\bar{\sigma}}\frac{d\hat{{\normalcolor p}}}{dz}+\frac{i\kappa_{2}L}{\bar{\sigma}}\hat{{\normalcolor f}_{3}}+\frac{i\kappa}{\bar{\sigma}}\hat{j_{3}}.\label{eq:dE2dz}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As demais Equações são decorrentes das Equações 13,
+ 15,
+ 20,
+ 21,
+ 31 e 32:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\hat{\tau}_{33}}{dz}=-i\omega\rho\dot{\hat{u}}_{3}-i\omega\rho_{f}\dot{\hat{w}}_{3}-i\kappa_{1}\hat{\tau}_{13}-i\kappa_{2}\hat{\tau}_{23}-\hat{\textnormal{F}}_{3},\label{eq:dtau33dz}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+\frac{d\hat{\tau}_{13}}{dz}=\left(-i\omega\rho+\frac{i\left(\lambda+2G\right)\kappa_{1}^{2}}{\omega}+\frac{Gi\kappa_{2}^{2}}{\omega}+\omega^{2}\rho_{f}^{2}\frac{\kappa}{\eta}-\kappa_{1}^{2}\rho_{f}C\frac{\kappa}{\eta}\right)\dot{\hat{u}}_{1}+\\
++\left(\frac{i\left(\lambda+2G\right)\kappa_{1}\kappa_{2}}{\omega}-\kappa_{1}\kappa_{2}C\rho_{f}\frac{\kappa}{\eta}\right)\dot{\hat{u}}_{2}+\\
++L\left(-i\omega\rho_{f}+\frac{\kappa_{1}^{2}Ci}{\omega}\right)\hat{\textnormal{E}}_{1}+\frac{L\kappa_{1}\kappa_{2}Ci}{\omega}\hat{\textnormal{E}}_{2}+\left(-\omega\rho_{f}\kappa_{1}\frac{\kappa}{\eta}+\frac{\kappa_{1}^{3}C\frac{\kappa}{\eta}}{\omega}+\kappa_{1}\kappa_{2}^{2}C\frac{\kappa}{\omega\eta}\right)\hat{{\normalcolor p}}+\\
++\frac{\kappa}{\eta}\left(-i\omega\rho_{f}+\frac{\kappa_{1}^{2}Ci}{\omega}\right)\hat{{\normalcolor f}_{1}}+\frac{\kappa_{1}\kappa_{2}Ci}{\omega}\hat{{\normalcolor f}_{2}}-\hat{\textnormal{F}}_{1}-\frac{\kappa_{1}\lambda}{\omega}\frac{d\dot{\hat{u}}_{3}}{dz}-\frac{\kappa_{1}C}{\omega}\frac{d\dot{\hat{w}}_{3}}{dz},
+\end{array}\label{dtau13dz}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+\frac{d\hat{\tau}_{23}}{dz}=\left(\frac{\kappa_{1}\kappa_{2}\left(\lambda+2G\right)i}{\omega}-\kappa_{1}\kappa_{2}C\rho_{f}\frac{\kappa}{\eta}\right)\dot{\hat{u}}_{1}+\\
++\left(-i\omega\rho-\left(\frac{i\left(\lambda+2G\right)\kappa_{2}^{2}}{\omega}\right)+\frac{Gi\kappa_{1}^{2}}{\omega}+\omega^{2}\rho_{f}^{2}-\kappa_{2}^{2}\rho_{f}C\frac{\kappa}{\eta}\right)\dot{\hat{u}}_{2}+\\
++\frac{L\kappa_{1}\kappa_{2}Ci}{\omega}\hat{\textnormal{E}}_{1}+L\left(-i\omega\rho_{f}+\frac{\kappa_{2}^{2}Ci}{\omega}\right)\hat{\textnormal{E}}_{2}+\left(-\omega\rho_{f}\kappa_{2}\frac{\kappa}{\eta}+\frac{\kappa_{1}^{2}\kappa_{2}C\frac{\kappa}{\eta}}{\omega}+\kappa_{2}^{3}C\frac{\kappa}{\omega\eta}\right)\hat{{\normalcolor p}}+\\
++\left(-i\omega\rho_{f}+\frac{\kappa_{2}^{2}Ci}{\omega}\frac{\kappa}{\eta}\right)\hat{{\normalcolor f}_{2}}+\frac{\kappa_{1}\kappa_{2}Ci}{\omega}\frac{\kappa}{\eta}\hat{{\normalcolor f}_{1}}+-\hat{\textnormal{F}}_{2}-\frac{\kappa_{2}\lambda}{\omega}\frac{d\dot{\hat{u}}_{3}}{dz}-\frac{\kappa_{2}C}{\omega}\frac{d\dot{\hat{w}}_{3}}{dz}.
+\end{array}\label{eq:dtau23dz}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para as Equações de 26 a 37 considera-se uma nova base ortogonal com o objetivo de simplificar o sistema.
+ A matriz de mudança de base é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\varOmega=\left[\begin{array}{ccc}
+\frac{\kappa_{1}}{\kappa} & \frac{\kappa_{2}}{\kappa} & 0\\
+\frac{-\kappa_{2}}{\kappa} & \frac{\kappa_{1}}{\kappa} & 0\\
+0 & 0 & 1
+\end{array}\right]\label{eq:matrizmudancadebase}
+\end{equation}
+
+\end_inset
+
+onde,
+ dado um vetor ou campo 
+\series bold
+X
+\series default
+ do sistema,
+ este é representado de acordo com a nova base da seguinte forma:
+ 
+\begin_inset Formula $\tilde{X}=\varOmega\text{{\normalcolor X}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Para efeito de simplificação,
+ definem-se as constantes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\beta_{1}=\left(C^{2}-M\left(\lambda+2G\right)\right)^{-1},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\beta_{2}=\left(1-\frac{\kappa}{\eta}\frac{L^{2}}{\bar{\sigma}}\right)^{-1},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+em que verificam-se as seguintes identidades
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\beta_{1}\left(C^{2}-M\lambda\right)=1+2\beta_{1}MG,
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+C^{2}=\beta_{1}^{-1}+2MG+M\lambda,
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(C^{2}-M\lambda\right)=\beta_{1}\left(C^{2}-M\lambda\right)^{2}-2MG=-4MG\beta_{1}\left(C^{2}-M\left(\lambda+2G\right)\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\beta_{2}L^{2}\kappa}{\eta\bar{\sigma}}+1=\beta^{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das Equações 31,
+ 32 e 35,
+ tem-se:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\dot{\tilde{u}}_{3}}{dz}=i\omega\left(\beta_{1}\left(C^{2}-M\lambda\right)\gamma\dot{\hat{u}}_{1}-\beta_{1}M\tilde{\tau}_{33}-\beta_{1}C\tilde{p}\right),\label{eq:derivadadeudz46}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+\frac{d\left(-\dot{\hat{w}}_{3}\right)}{dz}=i\omega(\left(2\beta_{1}\gamma GC-i\omega\rho_{f}\gamma\frac{\kappa}{\eta}\right)\dot{\tilde{u}}_{1}+\\
++\left(-\beta_{1}\left(C^{2}-2G\right)+i\omega\gamma^{2}\frac{\kappa}{\eta}\right)\tilde{p}-\gamma L\tilde{E_{1}}-C\beta_{1}\tilde{\tau}_{33})+i\kappa\frac{\kappa}{\eta}\tilde{f_{1},}
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\tilde{\tau}_{33}}{dz}=i\omega(\rho\dot{\tilde{u}}_{3}+\rho_{f}\dot{\tilde{w}}_{3}+\gamma\tilde{\tau}_{13})-\tilde{F}_{3}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Da Equação 28,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\hat{{\normalcolor p}}}{dz}=-i\omega\left(\rho_{f}\dot{\hat{u}}_{3}-\frac{\beta_{2}\eta}{i\omega\kappa}\dot{\tilde{w}}_{3}-\frac{\beta_{2}\gamma L\eta}{\kappa\bar{\sigma}}\hat{\textnormal{H}}_{2}\right)+\hat{{\normalcolor f}_{3}}-\frac{\beta_{2}\gamma L\eta}{\kappa\bar{\sigma}}\hat{j_{3}}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e das Equações 29 e 30,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\dot{\tilde{u}}_{1}}{dz}=\frac{\kappa_{1}}{\kappa}\frac{d\dot{\tilde{u}}_{1}}{dz}+\frac{\kappa_{2}}{\kappa}\frac{d\dot{\tilde{u}}_{1}}{dz},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\dot{\tilde{u}}_{2}}{dz}=\frac{\kappa_{2}}{\kappa}\frac{d\dot{\tilde{u}}_{1}}{dz}+\frac{\kappa_{1}}{\kappa}\frac{d\dot{\tilde{u}}_{2}}{dz},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+conclui-se que 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\dot{\tilde{u}}_{1}}{dz}=-i\omega\left(G^{-1}\tilde{\tau}_{13}+\gamma\dot{\tilde{u}}_{3}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\dot{\tilde{u}}_{2}}{dz}=-i\omega\left(G^{-1}\gamma\tilde{\tau}_{23}\right).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das Equações 26,
+ 27,
+ 33 e 34:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\left(-\tilde{\textnormal{H}}_{1}\right)}{dz}=-i\omega\left(\rho_{f}L\dot{\tilde{u}}_{2}-\left(\frac{\gamma^{2}}{\mu}-\frac{i\bar{\sigma}}{\omega}\right)\tilde{E}_{2}\right)+L\tilde{f_{2}}-\tilde{j}_{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\tilde{\textnormal{H}}_{2}}{dz}=-i\omega\left(\rho_{f}L\dot{\tilde{u}}_{1}-\gamma L\tilde{p}-\frac{i\bar{\sigma}}{\omega}\tilde{E}_{1}\right)+L\tilde{f_{1}}-\tilde{j}_{1},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\tilde{\textnormal{E}}_{1}}{dz}=-i\omega\left(\frac{\beta_{2}L\eta\gamma}{\kappa\bar{\sigma}}\dot{\tilde{w}}_{3}+\left(-\mu-\frac{i\omega\beta_{2}\gamma^{2}}{\bar{\sigma}}\right)\tilde{H_{2}}\right)-\frac{i\kappa\beta_{2}}{\bar{\sigma}}\tilde{j}_{3}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\tilde{\textnormal{E}}_{2}}{dz}=-i\omega\left(-\mu\tilde{\textnormal{H}}_{1}\right),
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e das Equações 36 e 37,
+ tem-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+\frac{d\tilde{\tau}_{13}}{dz}=-i\omega(\rho+i\omega\rho_{f}^{2}\frac{\kappa}{\eta}-4\beta_{1}\gamma^{2}G\left(C^{2}-M(\lambda+G))\right)\dot{\tilde{u}}_{1}+\rho_{f}L\tilde{\textnormal{E}}_{1}+\\
++\left(2\beta_{1}\gamma CG-i\omega\rho_{f}\gamma\frac{\kappa}{\eta}\right)\tilde{p}+\beta_{1}\gamma\left(C^{2}-M\lambda\right)\tilde{\tau}_{33}-\tilde{\textnormal{F}}_{1}-i\omega\frac{\kappa}{\eta}\tilde{f_{1},}
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+\frac{d\tilde{\tau}_{23}}{dz}=-i\omega\left((\rho-G\gamma^{2}+i\omega\rho_{f}^{2}\frac{\kappa}{\eta})\dot{\tilde{u}}_{2}+\rho_{f}L\tilde{\textnormal{E}}_{2}\right)-\tilde{\textnormal{F}}_{2}-i\omega\rho_{f}\frac{\kappa}{\eta}\tilde{f_{2}.}\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+da Equação 18 têm-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tilde{\textnormal{H}}_{3}=\frac{\gamma}{\mu}\tilde{\textnormal{E}}_{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Da Equação 19,
+ segue que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tilde{\textnormal{E}}_{3}=\beta_{2}\left(\frac{i\kappa_{1}}{\bar{\sigma}}\tilde{\textnormal{H}}_{2}-\frac{L\eta}{\kappa\bar{\sigma}}\dot{\tilde{w}}_{3}-\frac{1}{\bar{\sigma}}\tilde{j_{3}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+das Equações 20 e 21 têm-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dot{\tilde{w}}_{1}=L\tilde{\textnormal{E}}_{1}-i\kappa\frac{\kappa}{\eta}\tilde{p}+i\omega\rho_{f}\frac{\kappa}{\eta}\dot{\tilde{u}}_{1}+\frac{\kappa}{\eta}\tilde{f_{1}},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dot{\tilde{w}}_{2}=L\tilde{\textnormal{E}}_{2}+i\omega\rho_{f}\frac{\kappa}{\eta}\dot{\tilde{u}}_{2}+\frac{\kappa}{\eta}\tilde{f_{2}.}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+de 23,
+ têm-se
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tilde{\tau}_{12}=-G\gamma\dot{\tilde{u}}_{2},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+E das Equações 24 e 25 conclui-se que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tilde{\tau}_{11}=\beta_{1}\left(-4G\gamma\left(C^{2}-M\left(\lambda+G\right)\right)\dot{\tilde{u}}_{1}+\left(C^{2}-\lambda M\right)\tilde{\tau}_{33}+2GC\tilde{p}\right),
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tilde{\tau}_{22}=\beta_{1}\left(-2G\gamma\left(C^{2}-\lambda M\right)\dot{\tilde{u}}_{1}+\left(C^{2}-\lambda M\right)\tilde{\tau}_{33}+2GC\tilde{p}\right).\label{eq:tau22eq66}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pelas equações deduzidas anteriormente,
+ 46 a 66,
+ verifica-se que é possível representá-las no formalismo de Ursin,
+ ou seja,
+ em dois sistemas.
+ 
+\end_layout
+
+\begin_layout Standard
+As variáveis que compõem os vetores 
+\begin_inset Formula $\varPhi^{\left(1\right)}$
+\end_inset
+
+ e 
+\begin_inset Formula $\varPhi^{\left(2\right)},$
+\end_inset
+
+ foram escolhidas por serem contínuas nas interfaces entre as camadas.
+ Dessa forma,
+ considerando que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\varPhi^{\left(1\right)}=\left(\dot{\tilde{u}}_{3},\tilde{\tau}_{13},-\dot{\tilde{w}}_{3},\tilde{\textnormal{H}}_{2},\tilde{\tau}_{33},\dot{\tilde{u}}_{1},\tilde{p},\tilde{\textnormal{E}}_{1}\right)^{T}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\varPhi^{\left(2\right)}=\left(\dot{\tilde{u}}_{2},\tilde{\textnormal{E}}_{2},\tilde{\tau}_{23},-\tilde{\textnormal{H}}_{1}\right)^{T}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+escreve-se o sistema de equações de Pride como um sistema de equações diferenciais ordinárias representadas no sistema do tipo Ursin,
+ conforme o modelo matemático apresentado em Ursin .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\varPhi}{dz}=-i\omega M\varPhi+S=-i\omega\left[\begin{array}{cc}
+0 & M_{1}\\
+M_{2} & 0
+\end{array}\right]\varPhi+S,
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\varPhi^{(j)}}{dz}=-i\omega M^{(j)}\varPhi^{(j)}+S^{(j)},\text{}\text{}\text{}j=1,2
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+em que 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+M^{(j)}=\left[\begin{array}{cc}
+0_{n_{j}\times n_{j}} & M_{1}^{(j)}\\
+M_{2}^{(j)} & 0_{n_{j}\times n_{j}}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+em que 
+\begin_inset Formula $n_{j}\times n_{j}$
+\end_inset
+
+ é a matriz nula de ordem 
+\begin_inset Formula $n_{j}$
+\end_inset
+
+ e 
+\begin_inset Formula $M_{1}^{(j)}$
+\end_inset
+
+ e 
+\begin_inset Formula $M_{2}^{(j)}$
+\end_inset
+
+ são matrizes simétricas de ordem 
+\begin_inset Formula $n_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+O sistema 1 é equivalente ao que Haartsen e Pride - chamam de Sistema PSVTM,
+ pois contém as ondas compressionais rápida 
+\begin_inset Formula $(P_{f})$
+\end_inset
+
+ e lenta 
+\begin_inset Formula $(P_{s})$
+\end_inset
+
+,
+ as ondas de cisalhamento vertical (SV) e as ondas magnéticas transversais (TM).
+ Para este sistema,
+ as submatrizes são
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+M_{1}^{(1)}=\left[\begin{array}{cccc}
+-\beta_{1}M & \beta_{1}\gamma\left(C^{2}-\lambda M\right) & -\beta_{1}C & 0\\
+\beta_{1}\gamma\left(C^{2}-\lambda M\right) & \rho+i\omega\rho_{f}^{2}\frac{\kappa}{\eta}-4\beta_{1}\gamma^{2}G\left(C^{2}-M\left(\lambda+G\right)\right) & 2\beta_{1}\gamma^{2}GC-i\omega\rho_{f}\gamma\frac{\kappa}{\eta} & \rho_{f}L\\
+-\beta_{1}C & \beta_{1}\gamma GC-i\omega\rho_{f}\gamma\frac{\kappa}{\eta} & -\beta_{1}\left(\lambda+2G\right)+i\omega\gamma^{2}\frac{\kappa}{\eta} & -\gamma L\\
+0 & \rho_{f}L & -\gamma L & \frac{\bar{\sigma}}{i\omega}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+M_{2}^{(1)}=\left[\begin{array}{cccc}
+\rho & \gamma & -\rho_{f} & 0\\
+\gamma & G^{-1} & 0 & 0\\
+-\rho_{f} & 0 & -\frac{\beta_{2}\eta}{i\omega\kappa} & -\frac{\beta_{2}\gamma L\eta}{\kappa\bar{\sigma}}\\
+0 & 0 & -\frac{\beta_{2}\gamma L\eta}{\kappa\bar{\sigma}} & -\mu-\frac{i\omega\beta_{2}\gamma^{2}}{\bar{\sigma}}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A fonte deste sistema é dada por
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S^{(1)}=\left(0,-\tilde{\textnormal{F}}_{1}-i\omega\rho_{f}\frac{\kappa}{\eta}\tilde{{\normalcolor f}_{1}},i\kappa\frac{\kappa}{\eta}\tilde{{\normalcolor f}_{1}},-\tilde{j_{1}}-L\tilde{{\normalcolor f}_{1}},-\tilde{\textnormal{F}}_{3},0,\tilde{{\normalcolor f}_{3}}-\beta_{2}\frac{L\eta}{\kappa\bar{\sigma}}\tilde{j_{3}},-ik\frac{\beta_{2}}{\bar{\sigma}}\tilde{j_{3}}\right)^{T}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Determinando 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\varPhi^{\left(1\right)}$
+\end_inset
+
+,
+ pode-se calcular as quatro variáveis que dependem apenas do sistema 1:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+\tilde{\textnormal{E}}_{3}=\beta_{2}\left(\frac{i\kappa_{1}}{\bar{\sigma}}\tilde{\textnormal{H}}_{2}-\frac{L\eta}{\kappa\bar{\sigma}}\dot{\tilde{w}}_{3}-\frac{1}{\bar{\sigma}}\tilde{j_{3}}\right),\\
+\dot{\tilde{w}}_{1}=L\tilde{\textnormal{E}}_{1}-i\kappa\frac{\kappa}{\eta}\tilde{p}+i\omega\rho_{f}\frac{\kappa}{\eta}\dot{\tilde{u}}_{1}+\frac{\kappa}{\eta}\tilde{f_{1}},\\
+\tilde{\tau}_{11}=\beta_{1}\left(-4G\gamma\left(C^{2}-M\left(\lambda+G\right)\right)\dot{\tilde{u}}_{1}+\left(C^{2}-\lambda M\right)\tilde{\tau}_{33}+2GC\tilde{p}\right),\\
+\tilde{\tau}_{22}=\beta_{1}\left(-2G\gamma\left(C^{2}-\lambda M\right)\dot{\tilde{u}}_{1}+\left(C^{2}-\lambda M\right)\tilde{\tau}_{33}+2GC\tilde{p}\right).
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O sistema 2 é equivalente ao que Haartsen e Pride - chamam de Sistema SHTE,
+ pois contém as ondas de cisalhamento horizontal (onda SH) e as ondas elétricas transversais (onda TE).
+ Para este sistema,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+M_{1}^{(2)}=\left[\begin{array}{cc}
+\frac{1}{G} & 0\\
+0 & -\mu
+\end{array}\right],
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+M_{2}^{(2)}=\left[\begin{array}{cc}
+\rho-G\gamma^{2}+i\omega\rho_{f}^{2}\frac{\kappa}{\eta} & \rho_{f}L\\
+\rho_{f}L & \frac{\bar{\sigma}}{i\omega}+\frac{\gamma^{2}}{\mu}
+\end{array}\right],
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e seu vetor fonte é dado por
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S^{(2)}=\left(0,0,-\tilde{\textnormal{F}}_{2}-i\omega\rho_{f}\frac{\kappa}{\eta}\tilde{f_{2}},-\tilde{j}_{2}-L\tilde{f_{2}}\right)^{T}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Determinando 
+\begin_inset Formula $\varPhi^{\left(2\right)}$
+\end_inset
+
+,
+ podem-se calcular as três variáveis que dependem apenas do sistema 2:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{c}
+\tilde{\textnormal{H}}_{3}=\frac{\gamma}{\mu}\tilde{\textnormal{E}}_{2},\\
+\dot{\tilde{w}}_{2}=L\tilde{\textnormal{E}}_{2}+i\omega\rho_{f}\frac{\kappa}{\eta}\dot{\tilde{u}}_{2}+\frac{\kappa}{\eta}\tilde{{\normalcolor f}_{2}},\\
+\tilde{\tau}_{12}=-G\gamma\dot{\tilde{u}}_{2}.
+\end{array}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Identificação de pacotes – assuntos
+\end_layout
+
+\begin_layout Standard
+Em UML,
+ um pacote é um mecanismo de agrupamento genérico que contém classes que fazem parte de um assunto e relacionam-se por um conceito comum.
+ Em outras palavras,
+ agrupam classes que se relacionam com maior frequência.
+\end_layout
+
+\begin_layout Itemize
+Métodos Numéricos e Computacionais:
+ Realiza operações de álgebra linear para resolver os sistemas de equações diferenciais parciais,
+ além de implementar transformadas rápidas de Fourier e suas inversas para transição entre os domínios do tempo e frequência.
+\end_layout
+
+\begin_layout Itemize
+Propriedades do Sistema:
+ pacote que armazena as propriedades físicas e mecânica das rochas,
+ além das propriedades dos fluidos e a configuração e gerenciamento dos parâmetros globais do sistema.
+\end_layout
+
+\begin_layout Itemize
+Simulador:
+ relaciona os pacotes,
+ sendo responsável pela criação e destruição de objetos.
+\end_layout
+
+\begin_layout Itemize
+Pacote Gráfico:
+ é um pacote que utiliza o gnuplot para plotar os resultados obtidos.
+\end_layout
+
+\begin_layout Itemize
+Biblioteca:
+ serão utilizadas métodos e funções já existentes para a resolução dos cálculos,
+ bibliotecas padrão de C++ tais como (STL),
+ etc.
+\end_layout
+
+\begin_layout Section
+Diagrama de pacotes – assuntos
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: Diagrama de pacotes – assuntos"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O diagrama de pacotes da Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-Pacotes"
+nolink "false"
+
+\end_inset
+
+ mostra as relações existentes entre os pacotes deste software.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagens/DiargramadePacotes.drawio.png
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Pacotes
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-Pacotes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\end_layout
+
+\end_body
+\end_document
